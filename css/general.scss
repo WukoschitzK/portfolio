@@ -22,6 +22,16 @@ body {
   }
 }
 
+
+@media (min-width: 700px) {
+  .wrapper {
+    padding: 0 70px;
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+
+}
+
 /* HEADER */
 .flexbox-header {
   display: flex;
@@ -105,7 +115,13 @@ h2 {
     margin: 0 auto;
     margin-top: 10px;
   }
+}
 
+h3 {
+  font-size: 26px !important;
+  color: black !important;
+  font-weight: 700 !important;
+  font-family: "Lato", sans-serif;
 }
 
 p {
