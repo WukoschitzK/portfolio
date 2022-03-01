@@ -69,6 +69,13 @@ h3 {
   }
 }
 
+@media (min-width: 1000px) {
+  .wrapper {
+    padding: 70px 150px;
+    margin: 0 auto;
+  }
+}
+
 /*NAV*/
 
 header {
@@ -95,7 +102,7 @@ header {
 /* HEADER */
 
 .headline__text {
-  padding: 70px 0;
+  padding: 300px 0 150px 0;
 
   p {
     font-size: 22px;
