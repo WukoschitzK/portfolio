@@ -51,6 +51,22 @@ h3 {
   font-size: 26px;
 }
 
+//scrollbar
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-primary-dark;
+  border-radius: 10px;
+}
+
 
 /* WRAPPER */
 
@@ -89,8 +105,26 @@ header {
 }
 
 .nav__item:hover {
-  text-decoration: underline;
-  transition: 0.5s ease;
+  //text-decoration: underline;
+  //transition: 0.5s ease;
+
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color-primary-light;
+    left: -2px;
+    bottom: 5px;
+    width: 110%;
+    z-index: -1;
+    height:10px;
+  }
+
+
+
 }
 
 .nav__number {
@@ -103,11 +137,17 @@ header {
 
 .headline__text {
   padding: 300px 0 150px 0;
+  width:50%;
 
   p {
     font-size: 22px;
     max-width: 48ch;
   }
+}
+
+.headline__img {
+  width: 45%;
+  margin-left: 4rem;
 }
 
 .headline--big {
