@@ -93,7 +93,30 @@ header {
   color: #002440;
   text-decoration: none;
 }
+.nav__item::after {
+  animation: nav-item-hover-animation 0.3s;
+}
 
+@keyframes nav-item-hover-animation {
+  0% {
+    content: "";
+    position: absolute;
+    background-color: #D2E6F4;
+    left: -2px;
+    bottom: 5px;
+    z-index: -1;
+    width: 0%;
+  }
+  100% {
+    content: "";
+    position: absolute;
+    background-color: #D2E6F4;
+    left: -2px;
+    bottom: 5px;
+    z-index: -1;
+    width: 100%;
+  }
+}
 .nav__item:hover {
   position: relative;
   display: inline-block;
@@ -118,7 +141,7 @@ header {
 
 /* HEADER */
 .headline__section {
-  height: 80vh;
+  height: 75vh;
   display: flex;
   align-items: end;
 }

@@ -102,12 +102,37 @@ header {
   margin-right: 20px;
   color: $base-text-color;
   text-decoration: none;
+
+  &::after {
+    animation: nav-item-hover-animation 0.3s;
+  }
+
 }
 
-.nav__item:hover {
-  //text-decoration: underline;
-  //transition: 0.5s ease;
 
+@keyframes nav-item-hover-animation {
+  0% {
+    content: "";
+    position: absolute;
+    background-color: $color-primary-light;
+    left: -2px;
+    bottom: 5px;
+    z-index: -1;
+    width:0%;
+  }
+  100% {
+    content: "";
+    position: absolute;
+    background-color: $color-primary-light;
+    left: -2px;
+    bottom: 5px;
+    z-index: -1;
+    width:100%;
+  }
+}
+
+
+.nav__item:hover {
   position: relative;
   display: inline-block;
   z-index: 2;
@@ -136,7 +161,7 @@ header {
 /* HEADER */
 
 .headline__section {
-  height: 80vh;
+  height: 75vh;
   display: flex;
   align-items: end;
 
